@@ -71,7 +71,7 @@ function Item() {
         </div>
         <div className="Item-description">
           <p>
-            These is the rarest, coolest sticker you will ever find, for 
+            This is the rarest, coolest sticker you will ever find, for 
             the best price ever that no one can match. Show that you are a
             proud Tuffy by putting this sticker on your laptop, water 
             bottle, or wherever you feel like.
