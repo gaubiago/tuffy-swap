@@ -15,7 +15,7 @@ function App() {
         description: {
           name: `Infinity Gauntlet ${i + 1}`,
           price: 9.99,
-          location: "Asgard",
+          location: "Asgard, Asgard",
         },
       });
     }
