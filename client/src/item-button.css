@@ -1,0 +1,30 @@
+.Box {
+    width: 200px;
+    border: 10px solid rgb(235, 156, 10);
+    padding: 0px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  img {
+      width: 150px;
+      height: auto;
+  }
+
+  p {
+      margin-top: 6px;
+      margin-bottom: 2px;
+  }
+  
+  .item_info {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+    a:link, a:visited {
+        background-color: #0c0fb6;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
