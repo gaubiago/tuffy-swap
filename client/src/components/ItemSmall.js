@@ -1,7 +1,7 @@
 import itemImg from "../images/item.png";
 import ItemDescription from "./ItemDescription";
 
-function Item({ item }) {
+function ItemSmall({ item }) {
   return (
     <div className="itemContainerSmall">
       <img src={item.imgURL} className="itemImageSmall" />
@@ -10,4 +10,4 @@ function Item({ item }) {
   );
 }
 
-export default Item;
+export default ItemSmall;

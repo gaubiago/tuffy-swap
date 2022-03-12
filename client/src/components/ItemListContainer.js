@@ -1,4 +1,4 @@
-import Item from "./Item";
+import Item from "./ItemSmall";
 
 function ItemListContainer({ items }) {
   return (
