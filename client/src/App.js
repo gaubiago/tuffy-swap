@@ -1,35 +1,23 @@
-import logo from "./logo.svg";
-import "./ItemListSmall.css";
-import ItemListContainer from "./components/ItemListContainer";
-
-import itemImg from "./images/item.png";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  function createDummyItems() {
-    const dummyItems = [];
-
-    for (let i = 0; i < 15; i++) {
-      dummyItems.push({
-        id: i + 1,
-        imgURL: itemImg,
-        description: {
-          name: `Infinity Gauntlet ${i + 1}`,
-          price: 9.99,
-          location: "Asgard, Asgard",
-        },
-      });
-    }
-
-    return dummyItems;
-  }
-
-  const dummyItems = createDummyItems();
-
-  console.log(dummyItems);
-
   return (
-    <div>
-      <ItemListContainer items={dummyItems} />
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
