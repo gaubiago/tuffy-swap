@@ -1,10 +1,10 @@
-import Item from "./ItemSmall";
+import ItemSmall from "./ItemSmall";
 
 function ItemListContainer({ items }) {
   return (
     <div className="itemListContainer">
       {items.map((item) => (
-        <Item key={item.id} item={item} />
+        <ItemSmall key={item.id} item={item} />
       ))}
     </div>
   );
