@@ -2,14 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-import Icon from './item_button'
+import Item from './Item';
+//import Icon from './item_button'
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Checkout from "./Checkout";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Icon />
-  </React.StrictMode>,
+  <Router>
+  <Routes>
+    <Route path="/" element={<Item />} />
+    <Route path="/checkout" element={<Checkout />} />
+  </Routes>
+</Router>,
+  // <React.StrictMode>
+  //   <Item />
+  //   <Icon />
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
