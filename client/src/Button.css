@@ -1,0 +1,37 @@
+.Button {
+    overflow: hidden;
+    background-color: #003563;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+
+  .Button-logo {
+    height: 80px;
+    pointer-events: none;
+  }
+  
+  .Button b {
+    float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 28px;
+  }
+
+  .Button b.login {
+    float :right;
+    text-align: center;
+  }
+
+  .Button b.register {
+    float: right;
+    text-align: center;
+  }
+
+  /* .App-link {
+    color: #61dafb;
+  } */
+  
