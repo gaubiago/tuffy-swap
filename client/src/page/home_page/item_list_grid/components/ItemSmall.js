@@ -1,4 +1,3 @@
-import itemImg from "../images/item.png";
 import ItemDescription from "./ItemDescription";
 
 function ItemSmall({ item }) {
