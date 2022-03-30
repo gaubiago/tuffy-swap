@@ -1,7 +1,9 @@
 import "./ItemListSmall.css";
-import ItemListContainer from "./components/ItemListContainer";
+import "../item_list_button/ItemButton.css"
 
-import itemImg from "./images/item.png";
+import ItemListContainer from "./components/ItemListContainer";
+import Header from "../../header/Header"
+import itemImg from "../images/tuffy_2.jpeg";
 
 function ItemList() {
   function createDummyItems() {
@@ -12,9 +14,9 @@ function ItemList() {
         id: i + 1,
         imgURL: itemImg,
         description: {
-          name: `Infinity Gauntlet ${i + 1}`,
-          price: 9.99,
-          location: "Asgard, Asgard",
+          name: `Tuffy Mascot Stickers ${i + 1}`,
+          price: 10,
+          location: "Fullerton, CA",
         },
       });
     }
@@ -24,10 +26,10 @@ function ItemList() {
 
   const dummyItems = createDummyItems();
 
-  console.log(dummyItems);
-
   return (
     <div>
+      <Header />
+
       <ItemListContainer items={dummyItems} />
     </div>
   );

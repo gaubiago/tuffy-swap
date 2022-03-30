@@ -1,24 +1,23 @@
 import React from 'react';
-import ReactDOM, { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-import Item from './Item';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Checkout from "./Checkout";
+import Homepage from "./pages/home/item_list_grid/ItemList"
+import Item from "./pages/item/Item"
+import Checkout from "./pages/checkout/Checkout";
+
 
 ReactDOM.render(
   <Router>
     <Routes>
-      <Route path="/" element={<Item />} />
+      <Route path="/" element={<Homepage />} />
+      <Route path="/item" element={<Item />} />
       <Route path="/checkout" element={<Checkout />} />
     </Routes>
   </Router>,
-  // <React.StrictMode>
-  //   <Item />
-  // </React.StrictMode>,
   document.getElementById('root')
 );
 

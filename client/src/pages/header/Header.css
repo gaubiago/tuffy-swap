@@ -1,0 +1,32 @@
+  .Header {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background-color: #003563;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    vertical-align: baseline;
+    align-items: center;
+  }
+
+  .Logo {
+    padding-left: 40px;
+    margin-right: auto;
+  }
+
+  .Logo img {
+    width: 150px;
+    height: 71px;
+  }
+  
+  .login, .register {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .register {
+    padding-right: 50px;
+  }
