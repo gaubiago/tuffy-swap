@@ -1,5 +1,5 @@
-import item_pic from './item_photo/tuffy_2.jpeg';
-import './item_button.css';
+import item_pic from '../images/tuffy_2.jpeg';
+import './ItemButton.css';
 
 function Icon() {
   return (

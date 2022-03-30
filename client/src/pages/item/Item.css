@@ -1,5 +1,7 @@
+  @import url("../header/Header.css");
+
   :root {
-      --user-photo: url('../src/user_photos/someone.jpeg');
+      --user-photo: url('./user_photos/someone.jpeg');
   }
   
   .Wrapper {
@@ -9,9 +11,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     flex-flow: row wrap;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5px; */
     align-content: center;
     align-items: center;
     justify-content: center;
