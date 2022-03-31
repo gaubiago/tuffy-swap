@@ -1,15 +1,15 @@
-import "./RegisterForm.css";
-import React, { useState, useEffect } from "react";
-import ErrorMsg from "./ErrorMsg";
-import { URL_ACCOUNTS } from "./Config.js";
+import './RegisterForm.css';
+import React, { useState, useEffect } from 'react';
+import ErrorMsg from './ErrorMsg';
+import { URL_ACCOUNTS } from './Config.js';
 
 const RegisterForm = () => {
   const initialState = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
     policy: false,
   };
 
@@ -19,7 +19,7 @@ const RegisterForm = () => {
 
   const onChangeHandler = (e) => {
     let { name, value } = e.target;
-    value = name === "policy" ? e.target.checked : value;
+    value = name === 'policy' ? e.target.checked : value;
 
     setFormValues({ ...formValues, [name]: value });
   };
@@ -27,38 +27,38 @@ const RegisterForm = () => {
   const validate = async (values) => {
     const errors = {};
 
-    if (isInputEmpty(values.firstName)) errors.firstName = "Cannot be empty";
-    if (isInputEmpty(values.lastName)) errors.lastName = "Cannot be empty";
+    if (isInputEmpty(values.firstName)) errors.firstName = 'Cannot be empty';
+    if (isInputEmpty(values.lastName)) errors.lastName = 'Cannot be empty';
 
-    if (isInputEmpty(values.email)) errors.email = "Cannot be empty";
+    if (isInputEmpty(values.email)) errors.email = 'Cannot be empty';
     else if (await existingEmail(values.email))
-      errors.email = "Email already exists";
+      errors.email = 'Email already exists';
 
-    if (isInputEmpty(values.password)) errors.password = "Cannot be empty";
+    if (isInputEmpty(values.password)) errors.password = 'Cannot be empty';
     if (isInputEmpty(values.confirmPassword))
-      errors.confirmPassword = "Cannot be empty";
+      errors.confirmPassword = 'Cannot be empty';
 
     if (values.password !== values.confirmPassword) {
-      errors.password = "Passwords do not match";
-      errors.confirmPassword = "Passwords do not match";
+      errors.password = 'Passwords do not match';
+      errors.confirmPassword = 'Passwords do not match';
     }
 
     if (!values.policy) {
-      errors.policy = "Please agree to these terms";
+      errors.policy = 'Please agree to these terms';
     }
 
     return errors;
   };
 
   function isInputEmpty(input) {
-    return input === "";
+    return input === '';
   }
 
   const getEmails = async function () {
     try {
       const res = await fetch(URL_ACCOUNTS);
 
-      if (!res.ok) throw new Error("Error fetching data");
+      if (!res.ok) throw new Error('Error fetching data');
 
       const data = await res.json();
 
@@ -81,9 +81,9 @@ const RegisterForm = () => {
 
   const postData = async (url, data) => {
     const option = {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     };
@@ -91,7 +91,7 @@ const RegisterForm = () => {
     try {
       const res = await fetch(url, option);
 
-      if (!res.ok) throw new Error("Error posting data");
+      if (!res.ok) throw new Error('Error posting data');
 
       const data = await res.json();
 
@@ -121,44 +121,44 @@ const RegisterForm = () => {
 
       try {
         const data = await postData(URL_ACCOUNTS, account);
-        console.log("Account registered");
+        console.log('Account registered');
       } catch (err) {
         alert(err);
       }
     } else {
-      console.log("Input error?");
+      console.log('Input error?');
     }
   }, [formErrors]);
   // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div>
-      <div className="container-form">
-        <div className="form-title">
-          <div className="form-title-text">
-            <span className="form-title-text-dash">
+      <div className='container-form'>
+        <div className='form-title'>
+          <div className='form-title-text'>
+            <span className='form-title-text-dash'>
               &mdash;&mdash;&mdash;&mdash;
             </span>
-            <p className="form-title-text-main">Register</p>
-            <span className="form-title-text-dash">
+            <p className='form-title-text-main'>Register</p>
+            <span className='form-title-text-dash'>
               &mdash;&mdash;&mdash;&mdash;
             </span>
           </div>
-          <p className="form-title-description">
+          <p className='form-title-description'>
             Create an account and start swapping !
           </p>
         </div>
 
-        <form className="form-register" onSubmit={submitHandler}>
-          <div className="form-fullname">
+        <form className='form-register' onSubmit={submitHandler}>
+          <div className='form-fullname'>
             <div>
-              <label htmlFor="form-firstname">First Name</label>
+              <label htmlFor='form-firstname'>First Name</label>
               <input
-                className={formErrors.firstName ? "input-invalid" : ""}
-                name="firstName"
-                id="form-firstname"
-                type="text"
-                placeholder="First Name"
+                className={formErrors.firstName ? 'input-invalid' : ''}
+                name='firstName'
+                id='form-firstname'
+                type='text'
+                placeholder='First Name'
                 value={formValues.firstName}
                 onChange={onChangeHandler}
               />
@@ -170,13 +170,13 @@ const RegisterForm = () => {
             </div>
 
             <div>
-              <label htmlFor="form-lastname">Last Name</label>
+              <label htmlFor='form-lastname'>Last Name</label>
               <input
-                className={formErrors.lastName ? "input-invalid" : ""}
-                name="lastName"
-                id="form-lastname"
-                type="text"
-                placeholder="Last Name"
+                className={formErrors.lastName ? 'input-invalid' : ''}
+                name='lastName'
+                id='form-lastname'
+                type='text'
+                placeholder='Last Name'
                 value={formValues.lastName}
                 onChange={onChangeHandler}
               />
@@ -189,13 +189,13 @@ const RegisterForm = () => {
           </div>
 
           <div>
-            <label htmlFor="form-email">Email</label>
+            <label htmlFor='form-email'>Email</label>
             <input
-              className={formErrors.email ? "input-invalid" : ""}
-              name="email"
-              id="form-email"
-              type="email"
-              placeholder="me@example.com"
+              className={formErrors.email ? 'input-invalid' : ''}
+              name='email'
+              id='form-email'
+              type='email'
+              placeholder='me@example.com'
               value={formValues.email}
               onChange={onChangeHandler}
             />
@@ -204,13 +204,13 @@ const RegisterForm = () => {
           </div>
 
           <div>
-            <label htmlFor="form-password">Password</label>
+            <label htmlFor='form-password'>Password</label>
             <input
-              className={formErrors.password ? "input-invalid" : ""}
-              name="password"
-              id="form-password"
-              type="password"
-              placeholder="Password"
+              className={formErrors.password ? 'input-invalid' : ''}
+              name='password'
+              id='form-password'
+              type='password'
+              placeholder='Password'
               value={formValues.password}
               onChange={onChangeHandler}
             />
@@ -219,13 +219,13 @@ const RegisterForm = () => {
           </div>
 
           <div>
-            <label htmlFor="form-password-comfirm">Comfirm Password</label>
+            <label htmlFor='form-password-comfirm'>Comfirm Password</label>
             <input
-              className={formErrors.confirmPassword ? "input-invalid" : ""}
-              name="confirmPassword"
-              id="form-password-comfirm"
-              type="password"
-              placeholder="Comfirm Password"
+              className={formErrors.confirmPassword ? 'input-invalid' : ''}
+              name='confirmPassword'
+              id='form-password-comfirm'
+              type='password'
+              placeholder='Comfirm Password'
               value={formValues.confirmPassword}
               onChange={onChangeHandler}
             />
@@ -238,25 +238,25 @@ const RegisterForm = () => {
 
           <div
             className={
-              "form-policy " + (formErrors.policy ? "input-invalid" : "")
+              'form-policy ' + (formErrors.policy ? 'input-invalid' : '')
             }
           >
             <input
-              type="checkbox"
-              name="policy"
-              id="form-policy-agree"
+              type='checkbox'
+              name='policy'
+              id='form-policy-agree'
               value={formValues.policy}
               onChange={onChangeHandler}
             />
-            <div className="form-policy-text">
+            <div className='form-policy-text'>
               <span>I accept the </span>
-              <a href="#">Terms of Use</a>
+              <a href='#'>Terms of Use</a>
               <span> & </span>
-              <a href="#"> Privacy Policy</a>
+              <a href='#'> Privacy Policy</a>
             </div>
           </div>
 
-          <button className="btn-submit-form">Register Now</button>
+          <button className='btn-submit-form'>Register Now</button>
         </form>
       </div>
     </div>
