@@ -20,6 +20,13 @@
       "lastName": "lo",
       "email": "cl@gmail.com",
       "password": "food"
+    },
+    {
+      "firstName": "sharoon",
+      "lastName": "lo",
+      "email": "123@ok.com",
+      "password": "666",
+      "id": 4
     }
   ]
 }
