@@ -9,10 +9,10 @@ function Header() {
       <div className='Logo' onClick={() => navigate('/')}>
         <img src={home_button} alt='logo' />
       </div>
-      <div class='login' href='#'>
+      <div className='login' onClick={() => navigate('/login')}>
         Log-in
       </div>
-      <div class='register' href='#'>
+      <div className='register' onClick={() => navigate('/register')}>
         Register
       </div>
     </header>
