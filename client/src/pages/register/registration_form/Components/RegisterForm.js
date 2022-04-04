@@ -2,6 +2,7 @@ import './RegisterForm.css';
 import React, { useState, useEffect } from 'react';
 import ErrorMsg from './ErrorMsg';
 import { URL_ACCOUNTS } from './Config.js';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
   const initialState = {
@@ -12,6 +13,8 @@ const RegisterForm = () => {
     confirmPassword: '',
     policy: false,
   };
+
+  const navigate = useNavigate();
 
   const [formValues, setFormValues] = useState(initialState);
   const [formErrors, setFormErrors] = useState({});
@@ -79,57 +82,62 @@ const RegisterForm = () => {
     }
   };
 
-  const postData = async (url, data) => {
-    const option = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    };
-
-    try {
-      const res = await fetch(url, option);
-
-      if (!res.ok) throw new Error('Error posting data');
-
-      const data = await res.json();
-
-      return data;
-    } catch (err) {
-      throw err;
-    }
-  };
-
   const submitHandler = async (e) => {
     e.preventDefault();
     setFormErrors(await validate(formValues));
     setIsSubmit(true);
   };
 
-  useEffect(async () => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      const emails = await getEmails();
+  useEffect(() => {
+    if (Object.keys(formErrors).length !== 0 || !isSubmit) return;
 
-      const account = {
-        id: emails.length + 1,
-        firstName: formValues.firstName,
-        lastName: formValues.lastName,
-        email: formValues.email,
-        password: formValues.password,
+    let newId;
+
+    (async () => {
+      try {
+        const res = await fetch(URL_ACCOUNTS);
+
+        if (!res.ok) throw new Error('Error fetching data');
+
+        newId = (await res.json()).length + 1;
+      } catch (err) {
+        return alert(err);
+      }
+    })();
+
+    const account = {
+      id: newId,
+      firstName: formValues.firstName,
+      lastName: formValues.lastName,
+      email: formValues.email,
+      password: formValues.password,
+    };
+
+    const postData = async (url, data) => {
+      const option = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       };
 
       try {
-        const data = await postData(URL_ACCOUNTS, account);
-        console.log('Account registered');
+        const res = await fetch(url, option);
+
+        if (!res.ok) throw new Error('Error posting data');
+
+        const data = await res.json();
+
+        return data;
       } catch (err) {
-        alert(err);
+        return alert(err);
       }
-    } else {
-      console.log('Input error?');
-    }
-  }, [formErrors]);
-  // eslint-disable-line react-hooks/exhaustive-deps
+    };
+
+    postData(URL_ACCOUNTS, account);
+    navigate('/');
+  }, [formErrors, isSubmit]);
 
   return (
     <div>
@@ -219,13 +227,13 @@ const RegisterForm = () => {
           </div>
 
           <div>
-            <label htmlFor='form-password-comfirm'>Comfirm Password</label>
+            <label htmlFor='form-password-confirm'>Confirm Password</label>
             <input
               className={formErrors.confirmPassword ? 'input-invalid' : ''}
               name='confirmPassword'
-              id='form-password-comfirm'
+              id='form-password-confirm'
               type='password'
-              placeholder='Comfirm Password'
+              placeholder='confirm Password'
               value={formValues.confirmPassword}
               onChange={onChangeHandler}
             />
