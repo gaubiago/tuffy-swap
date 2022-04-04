@@ -12,13 +12,13 @@ function Icon() {
         <img src={item_pic} className='item_pic' alt='pic' />
 
         <div className='item_info'>
-          <p class='small'>
+          <p className='small'>
             <div className='text-item'>
               Tuffy Mascot Stickers <br></br>
               $10.00 <br></br>
             </div>
           </p>
-          <p class='small'>
+          <p className='small'>
             <div className='text-location'>Fullerton, CA</div>
           </p>
         </div>

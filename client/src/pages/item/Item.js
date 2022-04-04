@@ -20,7 +20,7 @@ function Item() {
 
       <div className='Wrapper'>
         <div className='Item-name'>
-          <snap>Tuffy mascot stickers</snap>
+          <span>Tuffy mascot stickers</span>
         </div>
 
         <div className='Wrapper-left-col'>
@@ -34,7 +34,7 @@ function Item() {
           <div className='Item-buy-button'>
             <button
               type='button'
-              class='btn btn-success'
+              className='btn btn-success'
               onClick={() => navigate('/checkout')}
             >
               <div className='Item-buy-button-text'>Buy</div>

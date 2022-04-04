@@ -8,7 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/home/item_list_grid/ItemList';
 import Item from './pages/item/Item';
 import Checkout from './pages/checkout/Checkout';
-import Register from './pages/register/registeration_form/Register';
+import Register from './pages/register/registration_form/Register';
+import Login from './pages/login/Login';
 
 ReactDOM.render(
   <Router>
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route path='/item' element={<Item />} />
       <Route path='/checkout' element={<Checkout />} />
       <Route path='/register' element={<Register />} />
+      <Route path='/login' element={<Login />} />
     </Routes>
   </Router>,
   document.getElementById('root')
