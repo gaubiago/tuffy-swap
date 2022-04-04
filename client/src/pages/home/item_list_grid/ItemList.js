@@ -1,9 +1,9 @@
-import "./ItemListSmall.css";
-import "../item_list_button/ItemButton.css"
+import './ItemListSmall.css';
+import '../item_list_button/ItemButton.css';
 
-import ItemListContainer from "./components/ItemListContainer";
-import Header from "../../header/Header"
-import itemImg from "../images/tuffy_2.jpeg";
+import ItemListContainer from './components/ItemListContainer';
+import Header from '../../header/Header';
+import itemImg from '../images/tuffy_2.jpeg';
 
 function ItemList() {
   function createDummyItems() {
@@ -16,7 +16,7 @@ function ItemList() {
         description: {
           name: `Tuffy Mascot Stickers ${i + 1}`,
           price: 10,
-          location: "Fullerton, CA",
+          location: 'Fullerton, CA',
         },
       });
     }

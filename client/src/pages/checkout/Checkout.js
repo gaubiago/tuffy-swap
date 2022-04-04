@@ -1,16 +1,14 @@
-import './Checkout.css'
-import Header from "../header/Header"
+import './Checkout.css';
+import Header from '../header/Header';
 
 function Checkout() {
-    return (
-        <div>
-            <Header />
+  return (
+    <div>
+      <Header />
 
-            <div className='Wrapper'>
-                Checkout Page
-            </div>
-        </div>
-    );
+      <div className='Wrapper'>Checkout Page</div>
+    </div>
+  );
 }
 
 export default Checkout;

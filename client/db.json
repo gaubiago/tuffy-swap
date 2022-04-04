@@ -1,0 +1,32 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "firstName": "john",
+      "lastName": "smith",
+      "email": "js@gmail.com",
+      "password": "abcdefg"
+    },
+    {
+      "id": 2,
+      "firstName": "tony",
+      "lastName": "stark",
+      "email": "ts@gmail.com",
+      "password": "ironman"
+    },
+    {
+      "id": 3,
+      "firstName": "cece",
+      "lastName": "lo",
+      "email": "cl@gmail.com",
+      "password": "food"
+    },
+    {
+      "firstName": "sharoon",
+      "lastName": "lo",
+      "email": "123@ok.com",
+      "password": "666",
+      "id": 4
+    }
+  ]
+}
