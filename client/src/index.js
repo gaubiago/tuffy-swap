@@ -10,6 +10,7 @@ import Item from './pages/item/Item';
 import Checkout from './pages/checkout/Checkout';
 import Register from './pages/register/registration_form/Register';
 import Login from './pages/login/Login';
+import ItemTemplate from './pages/item/ItemTemplate';
 
 ReactDOM.render(
   <Router>
@@ -19,6 +20,14 @@ ReactDOM.render(
       <Route path='/checkout' element={<Checkout />} />
       <Route path='/register' element={<Register />} />
       <Route path='/login' element={<Login />} />
+      <Route
+        path='/test'
+        element={
+          <ItemTemplate
+            itemData={{ itemImgPath: './item_photos/tuffy_2.jpeg' }}
+          />
+        }
+      />
     </Routes>
   </Router>,
   document.getElementById('root')
