@@ -1,11 +1,11 @@
-function ItemDescription({ description }) {
-  const price = `$ ${new Intl.NumberFormat('en-US').format(description.price)}`;
+function ItemDescription({ item }) {
+  const price = `$ ${new Intl.NumberFormat('en-US').format(item.price)}`;
 
   return (
-    <div className='itemDescriptionSmall'>
-      <h5 className='itemNameSmall'>{description.name}</h5>
-      <h5 className='itemPriceSmall'>{price}</h5>
-      <h5 className='itemLocationSmall'>{description.location}</h5>
+    <div className='grid-item-info-container'>
+      <p className='grid-item-name'>{item.name}</p>
+      <p className='grid-item-price'>{price}</p>
+      <p className='grid-item-location'>{item.location}</p>
     </div>
   );
 }

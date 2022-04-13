@@ -1,7 +1,7 @@
 import './RegisterForm.css';
 import React, { useState, useEffect } from 'react';
 import ErrorMsg from './ErrorMsg';
-import { URL_ACCOUNTS } from './Config.js';
+import { URL_ACCOUNTS } from '../../../../Config.js';
 import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {

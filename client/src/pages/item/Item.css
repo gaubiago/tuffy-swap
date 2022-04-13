@@ -1,162 +1,153 @@
-  @import url("../header/Header.css");
+@import url('../header/Header.css');
 
-  :root {
-      --user-photo: url('./user_photos/someone.jpeg');
-  }
-  
-  .Wrapper {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-flow: row wrap;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+:root {
+  --user-photo: url('./user_photos/someone.jpeg');
+}
 
-  }
+.Wrapper {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
-  .Wrapper-left-col {
-    margin-left: 10%;
-    padding-right: 15px;
-    width: 33%;
-    /* border-style: solid;
+.Wrapper-left-col {
+  margin-left: 10%;
+  padding-right: 15px;
+  width: 33%;
+  /* border-style: solid;
     border-color: darkolivegreen; */
-  }
+}
 
-  .Wrapper-right-col {
-    margin-right: 10%;
-    padding-left: 15px;
-    width: 33%;
-    /* border-style: solid;
+.Wrapper-right-col {
+  margin-right: 10%;
+  padding-left: 15px;
+  width: 33%;
+  /* border-style: solid;
     border-color: darkolivegreen; */
-  }
+}
 
-  .Item-name {
-    margin: auto;
-    text-align: center;
-    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-    font-size: xxx-large;
-    flex: 0 0 100%;
-    padding-bottom: 25px;
-    /* border-style: solid;
+.Item-name {
+  margin: auto;
+  text-align: center;
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  font-size: xxx-large;
+  flex: 0 0 100%;
+  padding-bottom: 25px;
+  /* border-style: solid;
     border-color: darkolivegreen; */
-  }
+}
 
-  .Item-price {
-    padding-top: 10px;
-    flex: 0 0 100%;
-    text-align: end;
-    font-weight: 400;
-    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-  }
+.Item-price {
+  padding-top: 10px;
+  flex: 0 0 100%;
+  text-align: end;
+  font-weight: 400;
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+}
 
-  .Item-image {
-    margin: auto auto;
-    text-align: center;
-  }
+.Item-image {
+  margin: auto auto;
+  text-align: center;
+}
 
-  img {
+/*   img {
     width: 80%;
     height: auto;
-  }
+  } */
 
-  .Item-dollar-sign {
-    vertical-align: super;
-    font-size: medium;
-    padding-right: 3px;
-    position: relative;
-    top: 2px;
-  }
+.Item-dollar-sign {
+  vertical-align: super;
+  font-size: medium;
+  padding-right: 3px;
+  position: relative;
+  top: 2px;
+}
 
-  .Item-buy-button {
-    flex: 0 0 100%;
-    text-align: end;
-  }
+.Item-buy-button {
+  flex: 0 0 100%;
+  text-align: end;
+}
 
-  .Item-buy-button button{
-    border-radius: 15px;
-    height: 30px;
-    width: 60px;
-  }
+.Item-buy-button button {
+  border-radius: 15px;
+  height: 30px;
+  width: 60px;
+}
 
-  .Item-buy-button-text{
-    text-align: center;
-    margin: auto;
-    position: relative;
-    bottom: 4px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-  }
+.Item-buy-button-text {
+  text-align: center;
+  margin: auto;
+  position: relative;
+  bottom: 4px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+}
 
-  .Seller {
-    display: flex;
-    flex-direction: row;
-  }
+.Seller {
+  display: flex;
+  flex-direction: row;
+}
 
-  .Seller-profile-pic {
-    margin-left: 30px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-image: var(--user-photo); 
-    background-size: cover;
-    background-position: center;
-  }
+.Seller-profile-pic {
+  margin-left: 30px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-image: var(--user-photo);
+  background-size: cover;
+  background-position: center;
+}
 
-  .Seller-name {
-    margin-left: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 24px;
-    font-weight: 600;
-    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-  }
+.Seller-name {
+  margin-left: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+}
 
-  .Seller-reputation {
-    margin: auto 30px;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 0px;
-  }
+.Seller-reputation {
+  margin: auto 30px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0px;
+}
 
-  .Seller-location {
-    /* position:relative;
+.Seller-location {
+  /* position:relative;
     left:60%; 
     top:2px; */
-    flex: 0 0 100%;
-    text-align: end;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-  }
+  flex: 0 0 100%;
+  text-align: end;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+}
 
-  .Seller-rating {
-    font-size: 10px;
-    margin-right: 3px;
-    color: orange;
-  }
+.Seller-rating {
+  font-size: 10px;
+  margin-right: 3px;
+  color: orange;
+}
 
-  .Item-description {
-    margin: auto 30px;
-    padding: 30px 0px 10px 20px;
-    font-size: 18px;
-    font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-  }
+.Item-description {
+  margin: auto 30px;
+  padding: 30px 0px 10px 20px;
+  font-size: 18px;
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+}
 
-  .Seller-location-icon {
-    padding-right: 7px;
-  }
-
-  
-
-  
-
-  
-
-  
+.Seller-location-icon {
+  padding-right: 7px;
+}
