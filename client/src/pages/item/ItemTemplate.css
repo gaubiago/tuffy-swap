@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  max-width: 150rem;
+  margin: 0 auto 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+.item-photo-container {
+  background-color: blue;
+  height: 60rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-info-container {
+  background-color: orange;
+}
+
+.item-detail-img {
+  height: auto;
+}
