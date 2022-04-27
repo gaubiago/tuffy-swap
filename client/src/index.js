@@ -1,25 +1,26 @@
 import React from 'react';
-import ReactDOM, { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-import Item from './Item';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.css'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
-import Checkout from "./Checkout";
+import Homepage from './pages/home/item_list_grid/ItemListGrid';
+import Checkout from './pages/checkout/Checkout';
+import Register from './pages/register/registration_form/Register';
+import Login from './pages/login/Login';
+import ItemTemplate from './pages/item/ItemTemplate';
 
 ReactDOM.render(
   <Router>
     <Routes>
-      <Route path="/" element={<Item />} />
-      <Route path="/checkout" element={<Checkout />} />
+      <Route path='/' element={<Homepage />} />
+      <Route path='/checkout' element={<Checkout />} />
+      <Route path='/register' element={<Register />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/item/:id' element={<ItemTemplate />} />
     </Routes>
   </Router>,
-  // <React.StrictMode>
-  //   <Item />
-  // </React.StrictMode>,
   document.getElementById('root')
 );
 

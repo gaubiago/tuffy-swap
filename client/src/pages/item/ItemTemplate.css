@@ -1,0 +1,144 @@
+.item-grid-container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.item-grid-container {
+  max-width: 150rem;
+  margin: 0 auto 0 auto;
+  padding: 10rem;
+  padding-top: 5rem;
+
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  column-gap: 3.2rem;
+  row-gap: 4rem;
+}
+
+.item-photo-container {
+  background-color: rgba(221, 221, 221, 0.2);
+  max-height: 50vh;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-info-container {
+  background-color: #fff;
+  font-family: sans-serif;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.item-detail-img {
+  height: 100%;
+}
+
+.item-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.item-price {
+  font-size: 4.4rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+
+  margin-bottom: 2rem;
+}
+
+.item-location,
+.item-condition {
+  font-size: 1.6rem;
+}
+
+.item-location-container,
+.item-condition-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-location-container {
+  margin-bottom: 1rem;
+}
+
+.item-icon {
+  font-size: 1.6rem;
+}
+
+.btn-item-buy {
+  display: block;
+  width: auto;
+  margin-top: 3rem;
+
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 500;
+
+  border: none;
+  background-color: #40c057;
+  border-radius: 20px;
+
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.btn-item-buy:hover {
+  background-color: #69db7c;
+}
+
+.item-user-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  margin-top: 3rem;
+}
+
+.item-user-img {
+  width: 8rem;
+}
+
+.item-user-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-user-name:link,
+.item-user-name:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.item-user-name:hover,
+.item-user-name:active {
+}
+
+.item-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item-description-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.item-description-text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}

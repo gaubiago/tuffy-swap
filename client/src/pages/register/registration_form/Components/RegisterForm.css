@@ -1,0 +1,161 @@
+.container-form * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container-form {
+  max-width: 40rem;
+  /* background-color: #a5d8ff; */
+  background-color: #ffdeeb;
+
+  margin: 0 auto;
+  margin-top: 3.6rem;
+  padding: 3.6rem 2.4rem;
+
+  border-radius: 10px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 3.6rem;
+}
+
+.form-title-text {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.form-title-text-main {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-title-text-dash {
+  font-size: 2.4rem;
+  color: #aaa;
+}
+
+.form-title-description {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.4rem;
+}
+
+.form-fullname {
+  display: flex;
+  gap: 3.6rem;
+}
+
+.form-register label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+.form-register input:not(#form-policy-agree) {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+
+  font-size: 1.6rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 8px;
+}
+
+.input-invalid {
+  box-shadow: 0 0 1px 2px red !important;
+}
+
+.form-policy {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#form-policy-agree {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.form-policy-text {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.form-policy span {
+  color: #777;
+  font-size: 1.2rem;
+}
+
+.form-policy a:link,
+.form-policy a:visited {
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.form-policy a:hover,
+.form-policy a:active {
+}
+
+.btn-submit-form {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+
+  border: none;
+  padding: 0.8rem 1.6rem;
+  background-color: #4c6ef5;
+  border-radius: 8px;
+
+  transition: all 0.3s;
+}
+
+.btn-submit-form:hover {
+  background-color: #3b5bdb;
+}
+
+.btn-test {
+  width: 10rem;
+  height: 5rem;
+}
+
+.form-icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  stroke: red;
+
+  display: inline-block;
+}
+
+.error-msg {
+  display: none;
+  gap: 0.6rem;
+
+  margin-top: 0.8rem;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: red;
+}
+
+.error-msg-active {
+  display: flex;
+}
