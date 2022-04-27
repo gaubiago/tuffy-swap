@@ -20,14 +20,128 @@
       "lastName": "lo",
       "email": "cl@gmail.com",
       "password": "food"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "RTX 3090 BRAND NEW!!!",
+      "itemImageName": "3090.jpg",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "John Smith",
+      "sellerRating": 4.5,
+      "description": "This is a brand new Nvidia RTX 3090! It is missing the plastic wrapping, but it is still new.",
+      "location": "Fullerton, CA",
+      "price": 999.99,
+      "condition": "New"
     },
     {
-      "firstName": "sharoon",
-      "lastName": "lo",
-      "email": "123@ok.com",
-      "password": "666",
-      "id": 4
+      "id": 2,
+      "name": "Thor's hammer",
+      "itemImageName": "hammer.webp",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "Honest Mike",
+      "sellerRating": 0.5,
+      "description": "This is the ACTUAL prop from the Avenger films. Definitely not some cheap knock off",
+      "location": "Fullerton, CA",
+      "price": 9.99,
+      "condition": "Used"
+    },
+    {
+      "id": 3,
+      "name": "Logitech Keyboard",
+      "itemImageName": "keyboard.jpg",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "George",
+      "sellerRating": 4,
+      "description": "This keyboard has slight sign of use. A little bit of scratch. 100% functional",
+      "location": "Fullerton, CA",
+      "price": 20,
+      "condition": "Used"
+    },
+    {
+      "id": 4,
+      "name": "Microsoft Surface",
+      "itemImageName": "laptop.jpg",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "Amy",
+      "sellerRating": 3.5,
+      "description": "Selling my surface. 90% new. Only used it to take notes in school.",
+      "location": "Fullerton, CA",
+      "price": 1229.99,
+      "condition": "Used"
+    },
+    {
+      "id": 5,
+      "name": "Batman lego set",
+      "itemImageName": "lego.jpeg",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "Logan",
+      "sellerRating": 3,
+      "description": "Idk why I bought this shit, It is still new. Never opened it",
+      "location": "Fullerton, CA",
+      "price": 15,
+      "condition": "New"
+    },
+    {
+      "id": 6,
+      "name": "New Yamaha piano",
+      "itemImageName": "piano.jpg",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "Richard",
+      "sellerRating": 4,
+      "description": "Yamaha piano. 80% new. Some sign of use.",
+      "location": "Fullerton, CA",
+      "price": 1050,
+      "condition": "Used"
+    },
+    {
+      "id": 7,
+      "name": "Pokemon Yellow",
+      "itemImageName": "pokemon.jpg",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "Ash",
+      "sellerRating": 5,
+      "description": "Original pokemon yellow for the gameboy.",
+      "location": "Fullerton, CA",
+      "price": 19.99,
+      "condition": "Used"
+    },
+    {
+      "id": 8,
+      "name": "Playstation 2",
+      "itemImageName": "ps2.jpg",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "Tony Tony",
+      "sellerRating": 4,
+      "description": "11yr old Playstation 2. Tested and still functional.",
+      "location": "Fullerton, CA",
+      "price": 49.99,
+      "condition": "Used"
+    },
+    {
+      "id": 9,
+      "name": "Captain America Shield",
+      "itemImageName": "shield.jpg",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "Steve",
+      "sellerRating": 5.5,
+      "description": "Best shield ever.",
+      "location": "Fullerton, CA",
+      "price": 100,
+      "condition": "Used"
+    },
+    {
+      "id": 10,
+      "name": "Nitendo Switch",
+      "itemImageName": "switch.jpeg",
+      "sellerImageName": "someone.jpeg",
+      "sellerName": "Honest Mike",
+      "sellerRating": 0.5,
+      "description": "Functional nitendo switch.",
+      "location": "Fullerton, CA",
+      "price": 199.99,
+      "condition": "New"
     }
   ]
 }
-
