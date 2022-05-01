@@ -9,6 +9,7 @@ import Homepage from './pages/home/item_list_grid/ItemListGrid';
 import Checkout from './pages/checkout/Checkout';
 import Register from './pages/register/registration_form/Register';
 import Login from './pages/login/Login';
+import ResetPassword from './pages/reset_password/ResetPassword';
 import ItemTemplate from './pages/item/ItemTemplate';
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path='/checkout' element={<Checkout />} />
       <Route path='/register' element={<Register />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/reset_password' element={<ResetPassword />} />
       <Route path='/item/:id' element={<ItemTemplate />} />
     </Routes>
   </Router>,

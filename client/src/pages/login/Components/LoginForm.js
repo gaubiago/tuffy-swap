@@ -14,6 +14,7 @@ const LoginForm = () => {
 
   const [formValues, setFormValues] = useState(initialState);
   const [formErrors, setFormErrors] = useState({});
+  const [errorMessage, setErrorMessage] = useState(false);
 
   const onChangeHandler = (e) => {
     let { name, value } = e.target;
@@ -61,6 +62,8 @@ const LoginForm = () => {
       if (emails.some((email) => email === credentials.email) && 
           passwords.some((password) => password === credentials.password))
         navigate('/');
+      else 
+        setErrorMessage(true);
     } catch (err) {
       alert(err);
     }
@@ -91,6 +94,13 @@ const LoginForm = () => {
         </div>
 
         <form className='form-register' onSubmit={submitHandler}>
+
+          { errorMessage && 
+            <div className='invalid-password'>
+              <b>Incorrect password. </b> 
+              Please try again or you can <a href="/reset_password">reset your password</a>.
+            </div> }
+
           <div>
             <label htmlFor='form-email'>Email</label>
             <input
