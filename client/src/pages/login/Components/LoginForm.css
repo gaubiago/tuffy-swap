@@ -55,6 +55,18 @@
   gap: 2.4rem;
 }
 
+.form-register .invalid-password {
+  background-color: rgb(228, 113, 9);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  font-size: medium;
+  border-radius: 10px;
+}
+
+.form-register .invalid-password a {
+  color: white;
+}
+
 .form-fullname {
   display: flex;
   gap: 3.6rem;
