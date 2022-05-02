@@ -6,7 +6,7 @@ function Checkout() {
     <div>
       <Header />
 
-      <div className='Wrapper'>Checkout Page</div>
+      <div className='checkout-wrapper'>Checkout Page</div>
     </div>
   );
 }

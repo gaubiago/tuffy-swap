@@ -6,7 +6,7 @@ function ResetPassword() {
     <div>
       <Header />
 
-      <div className='Wrapper'>Reset Password Page</div>
+      <div className='reset-password-wrapper'>Reset Password Page</div>
     </div>
   );
 }
