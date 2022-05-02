@@ -5,13 +5,10 @@ import { useNavigate, useLocation } from 'react-router-dom';
 function Header() {
   let navigate = useNavigate();
   let location = useLocation();
-
-  console.log(location.pathname);
   
   let hideRightButtons = (location.pathname === '/login' || location.pathname === '/register');
-
   const loggedInUser = localStorage.getItem('user')
-  console.log(loggedInUser); 
+
   return (
     <header className='Header'>
       <div className='Logo' onClick={() => navigate('/')}>

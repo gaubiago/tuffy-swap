@@ -11,6 +11,8 @@ const ItemTemplate = () => {
   let navigate = useNavigate();
   let location = useLocation();
 
+  const data = location.state.data;
+
   return (
     <div className='item-template'>
       <Header />
@@ -31,7 +33,7 @@ const ItemTemplate = () => {
             <p className='item-location'>{location.state.data.location}</p>
           </div>
 
-          <div class='item-condition-container'>
+          <div className='item-condition-container'>
             <FontAwesomeIcon className='item-icon' icon={faHourglass} />
             <p className='item-condition'>
               Condition: {location.state.data.condition}
@@ -41,7 +43,11 @@ const ItemTemplate = () => {
           <button
             className='btn-item-buy'
             onClick={() => {
-              navigate('/checkout');
+              navigate(`/checkout`, {
+                state: {
+                  data,
+                },
+              });
             }}
           >
             Buy
