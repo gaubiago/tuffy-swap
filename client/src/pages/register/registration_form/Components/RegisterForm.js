@@ -141,7 +141,7 @@ const RegisterForm = () => {
 
   return (
     <div>
-      <div className='container-form'>
+      <div className='register-container-form'>
         <div className='form-title'>
           <div className='form-title-text'>
             <span className='form-title-text-dash'>
@@ -233,7 +233,7 @@ const RegisterForm = () => {
               name='confirmPassword'
               id='form-password-confirm'
               type='password'
-              placeholder='confirm Password'
+              placeholder='Confirm Password'
               value={formValues.confirmPassword}
               onChange={onChangeHandler}
             />
