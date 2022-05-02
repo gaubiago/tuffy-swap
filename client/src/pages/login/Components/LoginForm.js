@@ -1,5 +1,5 @@
 import './LoginForm.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ErrorMsg from './ErrorMsg';
 import { URL_ACCOUNTS } from './Config.js';
 import { useNavigate } from 'react-router-dom';
@@ -7,13 +7,14 @@ import { useNavigate } from 'react-router-dom';
 const LoginForm = () => {
   let navigate = useNavigate();
 
-  const initialState = {
+  const user = {
     email: '',
     password: '',
   };
 
-  const [formValues, setFormValues] = useState(initialState);
+  const [formValues, setFormValues] = useState(user);
   const [formErrors, setFormErrors] = useState({});
+  const [errorMessage, setErrorMessage] = useState(false);
 
   const onChangeHandler = (e) => {
     let { name, value } = e.target;
@@ -59,8 +60,20 @@ const LoginForm = () => {
       const passwords = data.map((account) => account.password);
 
       if (emails.some((email) => email === credentials.email) && 
-          passwords.some((password) => password === credentials.password))
+          passwords.some((password) => password === credentials.password)) {
+        let first_name;
+        data.forEach( (account) => { 
+          if (account.email === credentials.email) 
+            first_name = account.firstName;
+        });
+        localStorage.setItem('user', JSON.stringify({ ...formValues}));
+        localStorage.setItem('user_name', first_name);
+        setErrorMessage(false);
         navigate('/');
+      } else {
+        if (formValues.email !== '' && formValues.password !== '')
+          setErrorMessage(true);
+      }
     } catch (err) {
       alert(err);
     }
@@ -71,6 +84,14 @@ const LoginForm = () => {
     setFormErrors(await checkForCredentials(formValues));
     onClickHandler();
   };
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem('user');
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setFormValues(foundUser);
+    }
+  }, []);
 
   return (
     <div>
@@ -91,6 +112,13 @@ const LoginForm = () => {
         </div>
 
         <form className='form-register' onSubmit={submitHandler}>
+
+          { errorMessage && 
+            <div className='invalid-password'>
+              <b>Incorrect password. </b> 
+              Please try again or you can <a href="/reset_password">reset your password</a>.
+            </div> }
+
           <div>
             <label htmlFor='form-email'>Email</label>
             <input

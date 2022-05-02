@@ -1,3 +1,7 @@
+  :root {
+    --user-photo: url('../item/user_photos/someone.jpeg');
+  }
+
   .Header {
     overflow: hidden;
     display: flex;
@@ -20,13 +24,56 @@
     height: 71px;
   }
   
-  .login, .register {
+  .header-login, .header-register {
     color: white;
     padding: 14px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: bold;
   }
 
-  .register {
+  .header-login span:hover, .header-register span:hover {
+    color: rgb(235, 156, 10);
+    padding: 0;
+  }
+
+  .header-register {
     padding-right: 50px;
+  }
+
+  .header-user-profile, .header-logout {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .header-user-profile span {
+    font-size: 12px;
+    margin: auto;
+  }
+
+  .header-logout {
+    font-weight: bold;
+  }
+
+  .header-user-profile-pic {
+    margin-left: 30px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: var(--user-photo);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+  } 
+
+  .header-user-profile-pic:hover {
+    border:2px solid rgb(235, 156, 10);
+    padding: 0;
+  }
+
+  .header-logout span:hover {
+    color: rgb(235, 156, 10);
+    padding: 0;
   }

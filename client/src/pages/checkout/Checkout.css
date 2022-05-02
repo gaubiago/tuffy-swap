@@ -1,3 +1,24 @@
-.Wrapper {
-    margin: auto;
+.checkout-wrapper {
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+
+.checkout-wrapper span {
+  font-weight: bold;
+  color: #003563;
+  margin-left: .8rem;
+  margin-right: .8rem;
+}
+
+.checkout-wrapper a {
+  color: #003563;
+  margin-left: .8rem;
+  margin-right: .8rem;
+}
+
+.checkout-wrapper a:hover {
+  color: rgb(228, 113, 9);
 }

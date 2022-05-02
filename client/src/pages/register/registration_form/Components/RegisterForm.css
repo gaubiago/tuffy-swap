@@ -5,10 +5,12 @@
   font-family: sans-serif;
 }
 
-.container-form {
+.register-container-form {
   max-width: 40rem;
   /* background-color: #a5d8ff; */
-  background-color: #ffdeeb;
+  /* background-color: #ffdeeb; */
+  background-color: #fff5e9;
+  border:2px solid rgb(220, 130, 24);
 
   margin: 0 auto;
   margin-top: 3.6rem;
@@ -122,14 +124,16 @@
 
   border: none;
   padding: 0.8rem 1.6rem;
-  background-color: #4c6ef5;
+  /* background-color: #4c6ef5; */
+  background-color: #003563;
   border-radius: 8px;
 
   transition: all 0.3s;
 }
 
 .btn-submit-form:hover {
-  background-color: #3b5bdb;
+  /* background-color: #3b5bdb; */
+  background-color: rgb(2, 87, 161);
 }
 
 .btn-test {

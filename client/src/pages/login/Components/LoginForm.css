@@ -8,7 +8,9 @@
 .container-form {
   max-width: 40rem;
   /* background-color: #a5d8ff; */
-  background-color: #ffdeeb;
+  /* background-color: #ffdeeb; */
+  background-color: #fff5e9;
+  border:2px solid rgb(220, 130, 24);
 
   margin: 0 auto;
   margin-top: 3.6rem;
@@ -53,6 +55,18 @@
   flex-direction: column;
 
   gap: 2.4rem;
+}
+
+.form-register .invalid-password {
+  background-color: rgb(228, 113, 9);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  font-size: medium;
+  border-radius: 10px;
+}
+
+.form-register .invalid-password a {
+  color: white;
 }
 
 .form-fullname {
@@ -122,14 +136,14 @@
 
   border: none;
   padding: 0.8rem 1.6rem;
-  background-color: #4c6ef5;
+  background-color: #003563;
   border-radius: 8px;
 
   transition: all 0.3s;
 }
 
 .btn-login:hover {
-  background-color: #3b5bdb;
+  background-color: rgb(2, 87, 161);
 }
 
 .btn-test {
