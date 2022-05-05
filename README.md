@@ -1,5 +1,5 @@
 # Tuffy Swap
-An e-commerce prototype app developed for class Foundations of Software Engineering at CSU, Fullerton.
+An e-commerce app developed for class Foundations of Software Engineering at CSU, Fullerton.
 
 # Team
 * [Aren Lizardo](https://github.com/delaureon)
